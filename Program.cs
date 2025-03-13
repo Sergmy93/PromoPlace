@@ -14,27 +14,23 @@ app.Run(async (context) => {
     //context.Response.ContentType = "text/plain;charset=utf-8";
     //await context.Response.WriteAsync(LoadFileList.readPromStr());
     if(request.Path == "/api/user") {
-        var message = "Некорректные данные";   // содержание сообщения по умолчанию
-        try {
-            // пытаемся получить данные json
+        var message = "ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ Г¤Г Г­Г­Г»ГҐ";   // Г±Г®Г¤ГҐГ°Г¦Г Г­ГЁГҐ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
+        try {            
             var person = await request.ReadFromJsonAsync<Person>();
-            if(person != null) // если данные сконвертированы в Person
+            if(person != null) // ГҐГ±Г«ГЁ Г¤Г Г­Г­Г»ГҐ Г±ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ Г­Г» Гў Person
                 message = $"Name: {a.Search(person.Name)}";
         }
-        catch { }
-        // отправляем пользователю данные
+        catch { }        
         await response.WriteAsJsonAsync(new { text = message });
     } else if(request.Path == "/api/list") {
                 
-                    var message = "Некорректные данные";   // содержание сообщения по умолчанию
-                    try {
-                        // пытаемся получить данные json
+                    var message = "ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ Г¤Г Г­Г­Г»ГҐ";   // Г±Г®Г¤ГҐГ°Г¦Г Г­ГЁГҐ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
+                    try {                        
                         var person = await request.ReadFromJsonAsync<Person>();
-                        if(person != null) // если данные сконвертированы в Person
+                        if(person != null) // ГҐГ±Г«ГЁ Г¤Г Г­Г­Г»ГҐ Г±ГЄГ®Г­ГўГҐГ°ГІГЁГ°Г®ГўГ Г­Г» Гў Person
                             message = $"{LoadFileList.readPromStr()}";
                     }
-                    catch { }
-                    // отправляем пользователю данные
+                    catch { }                    
                     await response.WriteAsJsonAsync(new { text = message });
                 }
             
