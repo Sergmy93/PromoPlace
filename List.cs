@@ -66,9 +66,7 @@ namespace ConsoleApp1 {
                     }
                     if(comp == null)
                        return "Таких нету или неверно введена локация";
-                }
-            //if(comp == null)
-            //return "Таких нету или неверно введена локация";
+                }            
             return comp;
         }
     }
