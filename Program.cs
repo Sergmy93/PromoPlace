@@ -10,9 +10,7 @@ var builder = WebApplication.CreateBuilder();
 var app = builder.Build();
 app.Run(async (context) => {
     var response = context.Response;
-    var request = context.Request;
-    //context.Response.ContentType = "text/plain;charset=utf-8";
-    //await context.Response.WriteAsync(LoadFileList.readPromStr());
+    var request = context.Request;    
     if(request.Path == "/api/user") {
         var message = "Íåêîððåêòíûå äàííûå";   // ñîäåðæàíèå ñîîáùåíèÿ ïî óìîë÷àíèþ
         try {            
